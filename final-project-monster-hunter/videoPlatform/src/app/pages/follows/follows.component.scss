@@ -1,0 +1,19 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 1em;
+  nb-card{
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.space{
+  margin-left: 12px;
+}
+

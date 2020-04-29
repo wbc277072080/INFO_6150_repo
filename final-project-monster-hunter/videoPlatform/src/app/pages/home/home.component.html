@@ -1,0 +1,37 @@
+<nb-card *ngFor="let tag of videoListKeys; index as i">
+  <nb-card-header>{{tag}}</nb-card-header>
+  <nb-card-body class="div-container" *ngIf="videoList.get(tag)">
+    <nb-card *ngFor="let video of videoList.get(tag)">
+      <nb-card-header routerLink="/pages/profile/{{userList.get(video.id)?.id}}">
+        <nb-user [name]="userList.get(video.id)?.username" [picture]="userList.get(video.id)?.profileImage"></nb-user>
+        {{video.title}}
+      </nb-card-header>
+      <div class = "video-info">
+        <div class="video-pic"
+        routerLink="/pages/details/{{video?.id}}">
+          <!-- <iframe class="div-video" [src]="videoService.getVideoImgURL(video.url) | safe: 'resourceUrl'" width="100%" height="100%"></iframe> -->
+          <img src="https://img.youtube.com/vi/{{video?.url}}/mqdefault.jpg">
+        </div>
+      <div class="video-like">
+        <div class="like">
+<!--          <div class="title">-->
+<!--            {{video.title}}-->
+<!--          </div>-->
+          <nb-icon icon="heart"
+            class="like-icon"></nb-icon>
+            like: {{video.like.length}}
+        </div>
+        <div class="favorite">
+          <nb-icon icon="edit"
+            class="favorite-icon"></nb-icon>
+            comments: {{video.comments.length}}
+        </div>
+      </div>
+    </div>
+
+      <nb-card-footer>
+        {{video.description}}
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,35 @@
+{
+  "name": "assignment-6-bochaowang-001087950",
+  "version": "1.0.0",
+  "description": "### Create a spreadsheet application like Google sheets using Javascript, RxJS, and CSS",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "rxjs": "^6.5.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch styles/main.scss dist/main.css",
+    "build": "webpack",
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://BochaoWang-001087950:Wbc17717091909@github.com/neu-mis-info6150-spring-2020/assignment-6-BochaoWang-001087950.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-6-BochaoWang-001087950/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-6-BochaoWang-001087950#readme",
+  "keywords": []
+}

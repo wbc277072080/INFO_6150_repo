@@ -1,0 +1,51 @@
+.history{
+    margin:0 auto;
+    //border:1px solid black;
+    margin-left: 20%;
+    margin-right:20%;
+    .history-title{
+        border-bottom: 1px solid gray;
+    }
+    .history-list{
+        margin-top: 50px;
+        .video-card{
+            margin-top: 30px;
+            margin-left: 0%;
+            margin-right:0%;
+            // border-bottom :1px solid gray;
+            div{
+                display: inline-block;
+                
+            }
+            .video-pic{
+                img{
+                    width:400px;
+                    height:226px;
+                }
+            }
+            .video-card-info{
+                
+                margin-left: 30px;
+                .title{
+                    margin-bottom: 50px;
+                    height: 70px;
+                    //width:200px;
+                    line-height: 18px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-bottom: 6px;
+                    word-break: break-all;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    span{
+                        font-size:10px;
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}

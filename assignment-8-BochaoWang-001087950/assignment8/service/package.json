@@ -1,0 +1,25 @@
+{
+  "name": "assignment-7-bochaowang-001087950",
+  "version": "1.0.0",
+  "description": "simple node server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Bochaowang-001087950:Wbc17717091909@github.com/neu-mis-info6150-spring-2020/assignment-7-BochaoWang-001087950.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.4"
+  },
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-BochaoWang-001087950/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-BochaoWang-001087950#readme"
+}

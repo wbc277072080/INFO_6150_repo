@@ -1,0 +1,50 @@
+.div-video {
+  width: 500px;
+  height: 300px;
+}
+.div-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 1em;
+}
+a {
+  text-decoration: none;
+}
+.video-info{
+  div{
+    display: inline-block;
+  }
+  .video-pic{
+    margin-left:10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .video-like{
+    margin-left:50px;
+    .title{
+      margin-bottom: 50px;
+                        height: 150px;
+                        width:250px;
+                        line-height: 18px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-bottom: 6px;
+                        word-break: break-all;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+    }
+    .like-icon{
+      color:red
+    }
+  }
+  .favorite{
+    margin-left: 50px;
+    .favorite-icon{
+      color:green
+    }
+  }
+
+}

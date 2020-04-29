@@ -1,0 +1,39 @@
+<div class = "history">
+    <div class = "history-title">
+        <nb-icon icon="star"></nb-icon> 
+        Favorite
+    </div>
+    <!-- <a routerLink="/pages/details/5e9e36f07344512a2968a44c" >readmore</a> -->
+
+    <div class = "history-list">
+        <!--*ngFor-->
+        <div class = "video-card" *ngFor="let video of videos">
+            <nb-card>
+                <nb-card-body>
+                    <div class="video-pic"
+                    routerLink = "/pages/details/{{video?.id}}">
+                        <img src="https://img.youtube.com/vi/{{video?.url}}/mqdefault.jpg">
+                    </div>
+
+
+                    <div class="video-card-info">
+                        <a href="/pages/details/{{video?.id}}" title="" class="title">
+                            {{video?.title}}
+                        </a>
+                        <!-- <nb-user class="user-info" 
+                                size="small" 
+                                [name]="history?.auth"
+                                picture=""
+                                color = "green">
+                        </nb-user> -->
+                        <span>{{video?.description}}</span>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+            
+        </div>
+        
+    </div>
+</div>
+
+<router-outlet></router-outlet>

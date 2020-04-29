@@ -1,0 +1,48 @@
+<nb-card size="giant">
+  <nb-card-header>
+    <div class = "user">
+      <nb-user [name]="profile?.username" [picture]="profile?.profileImage"></nb-user>
+    </div>
+    <div class = "follow-btn">
+      <button nbButton status="danger"
+            class="follow-btn"
+            (click)="addFollow();
+            followClicked=!followClicked"
+            [class.follow-unclicked]="!followClicked">
+      Follow
+      <nb-icon icon="heart"
+               class="follow-icon"></nb-icon>
+      <span class ="followCount"></span>
+    </button>
+    </div>
+    
+  </nb-card-header>
+  <nb-card-body class="container">
+    <nb-card *ngFor="let video of videos">
+      <nb-card-header>{{video.title}}</nb-card-header>
+      <a routerLink="/pages/details/{{video.id}}">
+      <nb-card-body>
+        <img [src]="videoService.getVideoImgURL(video.url) | safe: 'resourceUrl'">
+        <div class="video-like">
+          <div class="like">
+            <!--          <div class="title">-->
+            <!--            {{video.title}}-->
+            <!--          </div>-->
+            <nb-icon icon="heart"
+                     class="like-icon"></nb-icon>
+            like: {{video.like.length}}
+          </div>
+          <div class="favorite">
+            <nb-icon icon="edit"
+                     class="favorite-icon"></nb-icon>
+            comments: {{video.comments.length}}
+          </div>
+        </div>
+      </nb-card-body>
+      </a>
+      <nb-card-footer>
+        {{video.description}}
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-body>
+</nb-card>

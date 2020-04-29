@@ -1,0 +1,48 @@
+<nb-flip-card>
+  <nb-card-front>
+    <nb-card accent="info">
+      <nb-card-header>Followers</nb-card-header>
+      <nb-card-body class="wrapper">
+        <nb-card *ngFor="let follower of followers" >
+          <nb-card-header>
+          </nb-card-header>
+          <a routerLink="/pages/profile/{{follower.id}}">
+          <nb-card-body>
+            <nb-user class="space" [name]="follower?.username" [picture]="follower?.profileImage"></nb-user>
+          </nb-card-body>
+          </a>
+          <nb-card-footer>
+            <nb-icon icon="people" [options]="{ fill: 'lightblue'}"></nb-icon>Follower {{follower.subscribed.length}}
+            &nbsp;
+            <nb-icon icon="people-outline" [options]="{ fill: 'danger'}"></nb-icon>Followee {{follower.subscribe.length}} 
+          </nb-card-footer>
+        </nb-card>
+      </nb-card-body>
+      <nb-card-footer>
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card accent="danger">
+      <nb-card-header>Followee</nb-card-header>
+      <nb-card-body class="wrapper">
+        <nb-card  *ngFor="let followee of followees">
+          <nb-card-header>
+          </nb-card-header>
+          <a routerLink="/pages/profile/{{followee.id}}">
+          <nb-card-body>
+            <nb-user class="space" [name]="followee?.username" [picture]="followee?.profileImage"></nb-user>
+          </nb-card-body>
+          </a>
+          <nb-card-footer>
+            <nb-icon icon="people" [options]="{ fill: 'lightblue'}"></nb-icon>Follower {{followee.subscribed.length}}
+            &nbsp;
+            <nb-icon icon="people-outline" [options]="{ fill: 'danger'}"></nb-icon>Followee {{followee.subscribe.length}}
+          </nb-card-footer>
+        </nb-card>
+      </nb-card-body>
+      <nb-card-footer>
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

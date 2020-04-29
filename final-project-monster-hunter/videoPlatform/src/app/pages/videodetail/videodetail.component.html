@@ -1,0 +1,147 @@
+<div class = "videodetail">
+    <div class = "left">
+        <div class = "video-info">
+            <h3 class = "videotitle" *ngIf="video.title">{{video.title}}</h3>
+            <p class = "videodescription" *ngIf="video.title">{{video.description}}</p>
+        </div>
+        <div class="videoframe">
+            <iframe width="90%" height="500px"
+            [src]="videoUrl | safe:'resourceUrl'"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        </div>
+        <div class = "icon-group">
+            <button nbButton ghost status="primary"
+            class ="like-btn"
+            (click)="likeClick();
+            "
+            [class.like-clicked]="likeClicked">
+                <nb-icon icon="heart"
+
+                ></nb-icon>
+                Like
+                <span class= "likeCount"></span>
+            </button>
+            <button nbButton ghost status="primary"
+            class="favorite-btn"
+            (click)="favoriteClick();
+            favoriteClicked=!favoriteClicked"
+            [class.favorite-clicked]="favoriteClicked">
+                <nb-icon icon="star"></nb-icon>
+                Favorite
+                <span class= "likeCount"></span>
+            </button>
+        </div>
+        <div class = "comment-up">
+
+            <h4 class = "comment-list-title">Comments</h4>
+            <div class = "comment-txt">
+                    <nb-user class="user-info"
+                    size="medium"
+                    [name]="user?.username"
+                    [picture]=""
+                    color = "green"
+                    >
+                </nb-user>
+
+                <div class="comment-input">
+                    <textarea cols="80"
+                    rows="5"
+                    placeholder="Please input your comment on this video"
+                    [(ngModel)] = "commentTxt"
+                   ></textarea>
+                </div>
+                <div class = "comment-btn">
+                    <button nbButton status="primary"
+                    (click)="addComment()">Comment</button>
+                </div>
+            </div>
+
+
+        </div>
+        <!--*ngFor-->
+        <div class= "comment-area" >
+            <div class = "comment-list" *ngFor="let comment of comments">
+                <nb-card>
+                    <nb-card-body>
+                        <div class="comment-user">
+                            <nb-user class="user-info"
+                             size="small"
+                            name="{{comment.auth}}"
+                            picture=""
+                            color = "green">
+                        </nb-user>
+                        </div>
+                        <div class = "comment">
+                            <p class = "comment-text">{{comment.txt}}</p>
+                        </div>
+                    </nb-card-body>
+                </nb-card>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class = "right">
+            <nb-user class="user-info"
+                size="large"
+                name={{author?.username}}
+                picture=""
+                color = "green"
+                     routerLink="/pages/profile/{{author?.id}}">
+        </nb-user>
+        <div class = "follow-btn-div">
+            <button nbButton status="danger"
+            class="follow-btn"
+            (click)="addFollow();
+            followClicked=!followClicked"
+            [class.follow-clicked]="followClicked">
+            + Follow
+            <nb-icon icon="heart"
+            class="follow-icon"></nb-icon>
+                <span class ="followCount"></span>
+            </button>
+
+        </div>
+
+
+        <div class = "video-list" scrollshow="true" >
+            <div class="video-list-title">
+                <h5>More Videos</h5>
+            </div>
+
+            <div class = "video-card" *ngFor="let video1 of videos">
+                <nb-card>
+                    <nb-card-body>
+                        <div class="video-pic"
+                        routerLink="/pages/details/{{video1?.id}}">
+                            <img src="https://img.youtube.com/vi/{{video1?.url}}/mqdefault.jpg">
+                        </div>
+                        <div class="video-card-info">
+                            <a href="/pages/details/{{video1?.id}}" title="" class="title">
+                                {{video1?.title}}
+                            </a>
+                            <!-- <span>{{authorname}}</span> -->
+                            <nb-user class="user-info"
+                                size="small"
+                                [name]="authorname"
+                                picture=""
+                                color = "green">
+                        </nb-user>
+                        </div>
+                    </nb-card-body>
+                </nb-card>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>

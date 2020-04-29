@@ -1,0 +1,20 @@
+form{
+  justify-content: center;
+  text-align: center;
+  .InputDiv{
+    display: block;
+    margin: 40px auto;
+    width: 50%;
+  }
+
+  .step2button{
+    margin-left: 30px;
+  }
+}
+
+.allDone{
+  margin-top: 30px;
+  font-size: 48px;
+  justify-content: center;
+  text-align: center;
+}

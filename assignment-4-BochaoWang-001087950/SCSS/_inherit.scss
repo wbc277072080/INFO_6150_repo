@@ -1,0 +1,24 @@
+@import "SCSS/_variables.scss";
+
+%line-height-1 {
+    line-height: 5px;
+  }
+%line-height-2{
+    line-height: 20px;
+}
+%line-height-3{
+    line-height: 10px;
+}
+%button-1{
+    font-size: 10px;
+    font-weight: 500;
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+}
+
+
+%primary-text{
+    font-size: $primary-font-size;
+}
+

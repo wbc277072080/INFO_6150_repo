@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <title>
+            Spreadsheet
+        </title>
+        <link href="dist/main.css" rel=stylesheet>
+    </head>
+
+    <body>
+        <h1>my spreadsheet</h1>
+        <section class = "button-group">
+            <button class = 'function-btn' id = 'reset-btn'>
+                Reset
+            </button>
+            <button class='function-btn' id = 'addrow-btn'>
+                Add row
+            </button>
+            <button class='function-btn' id = 'addcol-btn'>
+                Add column
+            </button>
+            <button class='function-btn' id = 'delrow-btn'>
+                Delete row
+            </button>
+            <button class='function-btn' id = 'delcol-btn'>
+                Delete column
+            </button>
+            
+            
+        </section>
+
+        <section class = 'mysheet'>
+          <table class = 'mytable' id ='table-all'>
+              <thead class = 'mytable-head' id = 'table-headers'>
+              </thead>
+              <tbody class = 'mytable-body' id = 'table-body'>
+              </tbody>
+          </table>
+        </section>
+        <input type="file" id="fileUpload" value='choose file'>
+        <button class='function-btn' id = 'upload-btn'>
+                upload csv
+        </button>
+        <button class='function-btn' id = 'export-btn'>
+            export csv
+        </button>
+        <script src="/bundle.js"></script>
+      </body>
+</html>

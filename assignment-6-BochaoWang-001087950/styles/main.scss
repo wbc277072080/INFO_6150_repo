@@ -1,0 +1,59 @@
+.selected {
+    border-color: red;
+    border: 1px solid red;
+  }
+
+body{
+    font-family: sans-serif;
+    h1{
+        margin-left: 40%;
+    }
+    .function-btn{
+        font-size: 10px;
+        font-weight: 500;
+        width: 100px;
+        height: 30px;
+        margin: 5px;
+        margin-left: 20px;
+        color: azure;
+        margin-top: 50px;
+        background-color: green;
+        border-radius: 10px 10px 10px 10px;
+    }
+    table,
+td,
+th,
+tr {
+  border: 0.05rem solid rgba(197, 197, 197, 0.486);
+  font-size: 1.4rem;
+  height: 2.5rem;
+  border-spacing: 0rem;
+}
+
+th {
+  font-weight: 500;
+}
+
+thead {
+  /* background-color: rgb(160, 180, 206); */
+  background-color: #f1f1f1;
+  /* color: #fff; */
+}
+
+td {
+  min-width: 10rem;
+  padding: 0.2rem 0.5rem;
+}
+
+th {
+  padding: 0.2rem 0.4rem;
+}
+th > .dropdown {
+  float: right;
+}
+
+tbody th {
+  min-width: 5rem;
+  background: #fafafa;
+}
+}

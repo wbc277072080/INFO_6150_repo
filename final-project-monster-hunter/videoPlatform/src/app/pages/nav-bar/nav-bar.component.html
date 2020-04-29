@@ -1,0 +1,23 @@
+<nb-layout>
+  <nb-layout-header>
+    <div class="navbar">
+      <nb-actions class="left" size="small">
+        <nb-action title="home" icon="home-outline" link="/pages/home"></nb-action>
+        <nb-action title="favorite" icon="star-outline" link="/pages/favorite"></nb-action>
+        <nb-action title="upload video" icon="cloud-upload-outline" link="/pages/upload"></nb-action>
+        <nb-action title="following" icon="person-add-outline" link="/pages/follows"></nb-action>
+      </nb-actions>
+
+<!--      <button (click)="subuser()">hello</button>-->
+<!--      <button (click)="fun2()">hello2</button>-->
+      <nb-user class="right" [nbContextMenu]="item" [name]="profile?.username"></nb-user>
+
+    </div>
+  </nb-layout-header>
+  <nb-layout-column>
+  <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer>
+
+  </nb-layout-footer>
+</nb-layout>

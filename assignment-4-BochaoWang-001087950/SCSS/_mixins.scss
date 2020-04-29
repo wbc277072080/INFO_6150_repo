@@ -1,0 +1,24 @@
+@mixin circles($size,$type) {
+    @if $type == 1{
+        border-top:$size;
+        border-right:$size;
+    } 
+    @if $type == 2{
+        border-top: $size;
+        border-right: $size;
+        border-bottom: $size;
+    }
+    @if $type == 3{
+        border-top: $size;
+    } 
+    @if $type == 4{
+        border-top:$size;
+        border-right:$size;
+    } 
+
+  }
+
+@mixin borders($w,$h){
+    width: $w;
+    height: $h;
+}

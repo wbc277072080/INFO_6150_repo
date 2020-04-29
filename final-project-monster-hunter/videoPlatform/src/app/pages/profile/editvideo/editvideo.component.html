@@ -1,0 +1,27 @@
+<!--Edit user's own video page-->
+<div class="poscenter" *ngIf="video">
+  <iframe width="560px"
+  height="315px" [src]="videoService.getVideoURL(video.url) | safe: 'resourceUrl'"></iframe>
+</div>
+
+<nb-card class="editarea" *ngIf="video">
+  <nb-card-header>
+
+  </nb-card-header>
+  <nb-card-body>
+    <!--Edit video title area-->
+    <label class="labsize"> Title:
+      &nbsp;
+      <input class="inputsize" nbInput [(ngModel)]="video.title" placeholder="{{video.title}}">
+    </label>
+    <!--Edit video description area-->
+    <label class="labelsize"> Description:
+      &nbsp;
+      <textarea class="desarea" nbInput [(ngModel)]="video.description" placeholder="{{video.description}}"></textarea>
+    </label>
+  </nb-card-body>
+  <nb-card-footer class="cenpos">
+    <button class="savebtn" nbButton (click)="save()">Save<nb-icon icon="bookmark-outline" [options]="{animation: {type: 'zoom'}, fill: 'green'}" ></nb-icon></button>
+    <button class="delbtn" nbButton (click)="delete()">Delete<nb-icon icon="trash-2-outline" [options]="{animation: {type: 'shake'}, fill: 'red'}" ></nb-icon></button>
+  </nb-card-footer>
+</nb-card>

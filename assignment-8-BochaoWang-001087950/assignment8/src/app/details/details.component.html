@@ -1,0 +1,25 @@
+<div class="todo-item">
+    <div class="complete">
+        <span>complete:</span>
+        <div contenteditable="false" class="edit" id="complete"><span>{{todos.isdone}}</span></div>
+      </div>
+    <div class="title">
+      <span>title:</span>
+      <div contenteditable="false" class="edit" id="title"><span>{{todos.title}}</span></div>
+    </div>
+    <div class="description">
+      <span>description:</span>
+      <div contenteditable="false" class="edit" id="description"><span>{{todos.description}}</span></div>
+    </div>
+    <div class="duedate">
+      <span>duedate:</span>
+      <div contenteditable="false" class="edit" id="duedate"><span>{{todos.duedate}}</span></div>
+    </div>
+    <div class="modifieddate">
+      <span>modifieddate:</span>
+      <div contenteditable="false" class="edit" id="modifieddate"><span>{{todos.modifiedDate}}</span></div>
+    </div>
+    <button class="close" (click)=close()> Close </button>
+
+  </div>
+  

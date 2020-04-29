@@ -1,0 +1,58 @@
+  .todo-item{
+    background-color: honeydew;
+  }
+  .title{
+    margin:auto;
+    width: 98%;
+    height: 50px;
+    background: cornsilk;
+    margin-top:20px;
+    font-size:25px;
+    overflow: hidden;
+  }
+  .duedate{
+    margin:auto;
+    width: 98%;
+    height: 50px;
+    background: cornsilk;
+    overflow: hidden;
+    margin-top:20px;
+    font-size:25px;
+  }
+  .description{
+    margin:auto;
+    width: 98%;
+    font-size:25px;
+    margin-top:20px;
+    background: cornsilk;
+  }
+  .edit{
+    display: inline-block;
+    word-break:break-all;
+  }
+  .complete{
+    margin:auto;
+    width: 98%;
+    height: 50px;
+    background: cornsilk;
+    overflow: hidden;
+    margin-top:20px;
+    font-size:25px;
+  }
+.modifieddate{
+    margin:auto;
+    width: 98%;
+    font-size:25px;
+    margin-top:20px;
+    background: cornsilk;
+}
+
+.close{
+  outline: none;
+      box-shadow: none;
+      border-width: 2px;
+      border-radius: 3px;
+      border-style: solid;
+      margin-left: 10px; 
+      margin-top: 20px;
+}
